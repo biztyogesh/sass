@@ -1,18 +1,30 @@
-table{
-  width: 50%;
-  height: 10px;
-  border-collapse: collapse;
-
+li{
+list-style-type:square;
 }
-th{
-  border-bottom: 1px solid skyblue;
-  border: 2px solid black;
+.drinks{
+  list-style-type: square;
 }
-td{
-  text-align: center;
-  border: 2px solid black;
-
+p{
+  list-style-type: circle;
 }
-h1{
-  text-decoration: underline;
+body{
+  margin: 100px;
 }
+ul{
+  list-style-type: decimal;
+}
+ul { li{
+  list-style-type: decimal;
+}
+}
+ul{
+  li{
+    ul{
+      li{
+        list-style-type: square;
+      }
+  
+    }
+  }
+}
+  

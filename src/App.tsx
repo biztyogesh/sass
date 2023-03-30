@@ -1,59 +1,51 @@
+import React from "react";
 import "./App.scss";
-
 function App() {
+  const master = [
+    { id: 1, name: "Sumit" },
+    { id: 2, name: "Dhanur" },
+    { id: 3, name: "Husban" },
+    { id: 4, name: "yogesh" },
+    { id: 5, name: "anjali" },
+    { id: 6, name: "Anshika" },
+  ];
   return (
-    <div className="App">
-      <h1>Employee Name</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Designation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sumit</td>
-            <td>23</td>
-            <td>Male</td>
-            <td>frontEnd</td>
-          </tr>
-          <tr>
-            <td>Dhanur</td>
-            <td>22</td>
-            <td>Male</td>
-            <td>frontEnd</td>
-          </tr>
-          <tr>
-            <td>Husban</td>
-            <td>21</td>
-            <td>Male</td>
-            <td>frontEnd</td>
-          </tr>
-          <tr>
-            <td>Anjali</td>
-            <td>23</td>
-            <td>Female</td>
-            <td>frontEnd</td>
-          </tr>
-          <tr>
-            <td>Anshika</td>
-            <td>23</td>
-            <td>Female</td>
-            <td>frontEnd</td>
-          </tr>
-          <tr>
-            <td>Yogesh</td>
-            <td>23</td>
-            <td>Male</td>
-            <td>frontEnd</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <ul>
+      <ul>
+        {master.map(({ id, name }) => (
+          <li key={id}> {name}</li>
+        ))}
+      </ul>
+      <h2>Nested List</h2>
+
+      <ul>
+        <li className="logo">Household Items</li>
+        <li>
+          Kitchen/Grocery
+          <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+            <li>Milk tea</li>
+          </ul>
+        </li>
+        <li>
+          Clearing
+          <ul>
+            <li>Black</li>
+            <li>Green</li>
+            <li>White</li>
+          </ul>
+        </li>
+        <li>
+          Shoping
+          <ul>
+            <li>Shirt</li>
+            <li>Tshirt</li>
+            <li>Hello</li>
+          </ul>
+        </li>
+      </ul>
+    </ul>
   );
 }
-
 export default App;
