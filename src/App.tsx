@@ -1,49 +1,59 @@
 import "./App.scss";
-import { useState } from "react";
 
 function App() {
-  const [cards] = useState([
-    {
-      title: "Card-1",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-    {
-      title: "Card-2",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-    {
-      title: "Card-3",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-    {
-      title: "Card-4",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-    {
-      title: "Card-5",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-    {
-      title: "Card-6",
-      text: "Length and appearance do not determine whether a section in a paper is a paragraph",
-    },
-  ]);
   return (
-    <div>
-      <section>
-        <div className="container">
-          <h1>Responsive Cards</h1>
-          <div className="Cards">
-            {cards.map((card, index) => (
-              <div key={index} className="Card">
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="App">
+      <h1>Employee Name</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sumit</td>
+            <td>23</td>
+            <td>Male</td>
+            <td>frontEnd</td>
+          </tr>
+          <tr>
+            <td>Dhanur</td>
+            <td>22</td>
+            <td>Male</td>
+            <td>frontEnd</td>
+          </tr>
+          <tr>
+            <td>Husban</td>
+            <td>21</td>
+            <td>Male</td>
+            <td>frontEnd</td>
+          </tr>
+          <tr>
+            <td>Anjali</td>
+            <td>23</td>
+            <td>Female</td>
+            <td>frontEnd</td>
+          </tr>
+          <tr>
+            <td>Anshika</td>
+            <td>23</td>
+            <td>Female</td>
+            <td>frontEnd</td>
+          </tr>
+          <tr>
+            <td>Yogesh</td>
+            <td>23</td>
+            <td>Male</td>
+            <td>frontEnd</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
+
 export default App;

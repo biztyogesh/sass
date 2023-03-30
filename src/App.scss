@@ -1,47 +1,18 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+table{
+  width: 50%;
+  height: 10px;
+  border-collapse: collapse;
 
 }
-body{
-  background-color: #f5f5f5;
-  color: #111;
+th{
+  border-bottom: 1px solid skyblue;
+  border: 2px solid black;
 }
-.container{
-  max-width: 50%;
-  width: 100%;
-  margin: auto;
-}
-section{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+td{
+  text-align: center;
+  border: 2px solid black;
+
 }
 h1{
-  font-size: 50px;
-  line-height: 60px;
-  text-align: center;
-  margin-bottom: 40px;
+  text-decoration: underline;
 }
-.Cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.Card{
-  flex:0 0 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
-  width: 100%;
-  background-color: #fff;
-  border-radius:10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: 0.1s;
-  border: 3px solid transparent;
-  text-transform: lowercase;
-}
-.card:hover{
-  border-color: #1d39c4;
-}  
