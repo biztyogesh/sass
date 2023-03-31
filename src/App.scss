@@ -1,30 +1,33 @@
-li{
-list-style-type:square;
-}
-.drinks{
-  list-style-type: square;
-}
-p{
-  list-style-type: circle;
-}
-body{
-  margin: 100px;
-}
-ul{
-  list-style-type: decimal;
-}
-ul { li{
-  list-style-type: decimal;
-}
-}
-ul{
-  li{
-    ul{
-      li{
-        list-style-type: square;
-      }
+
+ul {
+  list-style-type: none;
+   margin: 200px;
+   padding: 0px;
+   width: 13%;
+   background-color: lightblue;
+   position: fixed;
+   height: 30%;
+   text-align: center;
+   border-radius: 10px;
   
-    }
-  }
+ 
 }
-  
+
+li a {
+  display: block;
+  color: #a07e7e;
+  padding: 8px 10px;
+  text-decoration: none;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color:darkslategray;
+  color: white;
+}
