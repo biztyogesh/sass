@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    max-height: 20rem;
+    width:100%;
+    align-items: center;
+    flex-direction: row;
+
+
+    .card{
+        display: flex;
+        height: 100%;
+        max-height: 8rem;
+        width: 100%;
+        max-width: 17rem;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        border-radius: 30px;
+        justify-content: space-evenly;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        
+        .heading{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+            
+         .groups{
+          height: 2rem;
+            }
+            .work{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                a{
+                    font-size: x-small;
+                }
+            }
+            .img{
+             height: 1rem;
+            }
+        }
+        .category{
+        display: flex;
+        justify-content: space-between;
+        font-size: x-small;
+            
+            .catitem{
+            color:white;
+            background-color: black;
+            font-size: xx-small;
+            border-radius: 1rem;
+            padding-left: 10px;
+            padding-right: 10px;
+             
+                
+            }
+        }
+        .ratings{
+            display: flex;
+            justify-content: space-between;
+            .images{
+                img{
+                    margin:-2.9px;
+                    height:1.5rem;
+                }
+            }
+        }
+    }
+
+}
