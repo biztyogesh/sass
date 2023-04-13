@@ -1,3 +1,5 @@
+
+/*---pure container ki scss--*/
 .container{
     display: flex;
     justify-content: flex-start;
@@ -6,32 +8,46 @@
     width:100%;
     align-items: center;
     flex-direction: row;
-
-
+    overflow: hidden;
+    
+    /*---card scss*/
     .card{
         display: flex;
         height: 100%;
         max-height: 8rem;
         width: 100%;
-        max-width: 17rem;
+        max-width: 16.5rem;
         background-color: #FFFFFF;
         flex-direction: column;
         border-radius: 30px;
         justify-content: space-evenly;
         padding-left: 1rem;
         padding-right: 1rem;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(32, 26, 26, 0.1);
+        box-shadow: 0px 4px 4px rgba(73, 63, 63, 0.05);
         
+        /*--- heading ki scss---*/
         .heading{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-family: 'Montserrat';
+        word-break: break-word;
+        overflow: hidden;
+
+        /*--- upr do heading k liye--*/
+        .subheading{
+            display: flex;
             
-         .groups{
+            flex-direction: row;
+
+        }
+            
+        /*--- DW ki scss--*/
+         .Icon{
           height: 2rem;
             }
+            /*---url or contant ki scss--*/
             .work{
                 display: flex;
                 flex-direction: column;
@@ -39,14 +55,16 @@
                 a{
                     font-size: x-small;
                 }
-            }
+             }
+             /*---choti si 5 image ki scss ---*/
             .img{
              height: 1rem;
             }
         }
+        /*---category ki scss ---*/
         .category{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         font-size: x-small;
             
             .catitem{
@@ -55,9 +73,7 @@
             font-size: xx-small;
             border-radius: 1rem;
             padding-left: 10px;
-            padding-right: 10px;
-             
-                
+            padding-right: 10px;    
             }
         }
         .ratings{
@@ -65,6 +81,7 @@
             justify-content: space-between;
             .images{
                 img{
+                    justify-content: space-between;
                     margin:-2.9px;
                     height:1.5rem;
                 }
@@ -72,4 +89,4 @@
         }
     }
 
-}
+    }

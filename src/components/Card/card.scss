@@ -1,0 +1,149 @@
+/*---pure container ki scss--*/
+.containerr {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  max-height: 20rem;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+ overflow: hidden;
+
+
+  /*---card scss*/
+  .cardss {
+    display: flex;
+    height: 100%;
+    word-wrap: break-word;
+    max-height: 15rem;
+    width: 100%;
+    max-width: 16.5rem;
+    background-color: #ffffff;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: space-evenly;
+    padding: 1rem;
+   // padding-left: 1rem;
+    // padding-right: 1rem;
+    border: 1.5px solid rgba(32, 26, 26, 0.1);
+    box-shadow: 0px 4px 4px gray(73, 63, 63, 0.05);
+
+ 
+
+    /*--- upr do heading k liye--*/
+    .subheadings {
+      display: flex;
+      height: 50%;
+      flex-direction: row;
+      justify-content: space-around;
+      border-bottom: 1px solid gray;
+      font-size: 16px;
+      font-family: 'Montserrat';
+      padding-bottom: 1rem;
+      font-size: 14px;
+     
+      .work{
+        overflow: hidden;
+      }
+
+      .Icon {
+        img {
+          height: 5rem;
+          border-radius: 10px;
+          box-shadow: 0px 4px 4px gray(73, 63, 63, 0.05);
+        }
+      }
+    }
+    .livecontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         overflow: hidden;
+        width: 100%;
+
+        
+
+   
+
+    .Live{
+        display: flex;
+        flex-direction: column;
+        // overflow: auto;
+        justify-content: space-around ;
+        align-items: center;
+        font-size: 12px;
+        font-family: 'Montserrat';
+        width: 50%;
+    }
+     .EMPLOYEES{
+        display: flex;
+        height: 100%;
+        width: 50%;
+        // overflow-y: scroll;
+        flex-direction: column;
+        border-left: 1.5px solid gray;
+        padding-left: 1.5rem;
+        font-size: 12px;
+        font-family: 'Montserrat';
+        word-break: break-word;
+
+       
+        
+     }
+}
+    /*--- DW ki scss--*/
+
+    /*---url or contant ki scss--*/
+    .work {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      word-wrap: break-word;
+      a {
+        font-size: x-small;
+      }
+    }
+
+    /*---choti si 5 image ki scss ---*/
+    .img {
+      height: 1rem;
+    }
+  }
+
+  @media only screen and (max-width:620px){
+    .cardss{
+        height: 100%;
+    word-wrap: break-word;
+
+    max-height: 20rem;
+    width: 100%;
+    max-width: 18rem;
+    }
+  }
+  /*---category ki scss ---*/
+  .category {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-small;
+
+    .catitem {
+      color: white;
+      background-color: black;
+      font-size: xx-small;
+      border-radius: 1rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .ratings {
+    display: flex;
+    justify-content: space-between;
+    .images {
+      img {
+        justify-content: space-between;
+        margin: -2.9px;
+        height: 1.5rem;
+      }
+    }
+  }
+}
