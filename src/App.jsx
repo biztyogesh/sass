@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
 
-    <Cards/>
-    <Cards/>
+    <Cards rating={4}/>
+    <Cards rating={4}/>
     <Card/>
     
     
