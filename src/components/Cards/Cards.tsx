@@ -42,11 +42,11 @@ function Cards({rating}:any) {
         <div className="ratings">
           <div> {[1, 2, 3, 4, 5].map(renderStar)}</div>
           <div className="images">
-            <img src="/emp3.png" alt="" />
-            <img src="/emp3.png" alt="" />
-            <img src="/emp3.png" alt="" />
-            <img src="/emp3.png" alt="" />
-            <img src="/emp3.png" alt="" />
+            <img src="/emp3.png" alt=""/>
+            <img src="/emp3.png" alt=""/>
+            <img src="/img.png" alt=""/>
+            <img src="/emp3.png" alt=""/>
+            <img src="/img.png" alt=""/>
           </div>
         </div>
       </div>
