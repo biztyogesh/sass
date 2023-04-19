@@ -1,0 +1,36 @@
+.position {
+    &-relative {
+        position: relative;
+    }
+    &-absolute {
+        position: absolute;
+    }
+    &-static {
+        position: static;
+    }
+    &-fixed {
+        position: fixed;
+    }
+}
+
+
+.overflow {
+    &-hidden {
+        overflow: hidden;
+    }
+    &-auto {
+        overflow: auto;
+    }
+}
+
+.box-shadow {
+    &-none {
+        box-shadow: none;
+    }
+}
+
+.display {
+    &-none {
+        display: none;
+    }
+}

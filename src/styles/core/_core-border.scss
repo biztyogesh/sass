@@ -1,0 +1,48 @@
+.border {
+  &-none {
+    border: none;
+  }
+
+  &-1 {
+    border: 1px solid;
+  }
+  
+  &-top {
+    border-top: 1px solid;
+  }
+  &-bottom {
+    border-bottom: 1px solid;
+  }
+  &-left {
+    border-left: 1px solid;
+  }
+  &-right {
+    border-right: 1px solid;
+  }
+
+  //Color
+  &-primary-color {
+    border-color: $primary-color;
+  }
+
+  &-secondary-color {
+    border-color: $secondary-color;
+  }
+
+  
+  
+  //Radius
+  &-radius-50 {
+    border-radius: 50%;
+  }
+  &-radius-100 {
+    border-radius: 100%;
+  }
+
+  &-radius-1 {
+    border-radius: 1rem;
+  }
+  &-radius-0 {
+    border-radius: 0;
+  }
+}

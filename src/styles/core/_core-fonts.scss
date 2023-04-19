@@ -1,0 +1,67 @@
+/*!
+ * BCG Henderson Font
+ */
+ @font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Italic'), local('HendersonBCGSans-Italic'),
+        url('../fonts/HendersonBCGSans-Italic.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Thin'), local('HendersonBCGSans-Thin'),
+        url('../fonts/HendersonBCGSans-Thin.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Bold'), local('HendersonBCGSans-Bold'),
+        url('../fonts/HendersonBCGSans-Bold.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Bold Italic'), local('HendersonBCGSans-BoldItalic'),
+        url('../fonts/HendersonBCGSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Light'), local('HendersonBCGSans-Light'),
+        url('../fonts/HendersonBCGSans-Light.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Light Italic'), local('HendersonBCGSans-LightItalic'),
+        url('../fonts/HendersonBCGSans-LightItalic.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans'), local('HendersonBCGSans-Regular'),
+        url('../fonts/HendersonBCGSans-Regular.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Henderson BCG Sans';
+    src: local('Henderson BCG Sans Thin Italic'), local('HendersonBCGSans-ThinItalic'),
+        url('../fonts/HendersonBCGSans-ThinItalic.woff2') format('woff2'),
+        url('../fonts/HendersonBCGSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}

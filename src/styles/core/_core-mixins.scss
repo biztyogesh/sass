@@ -1,0 +1,19 @@
+@mixin space-func($name, $var, $subfix, $power) {
+    .#{$name}-#{$var}#{$subfix} {
+      #{$name}: #{($var)}#{$power};
+    }
+  }
+  
+  @mixin dynamic-space-property($name, $subfix, $power, $start, $end) {
+    @for $var from $start to $end {
+      @include space-func($name, $var, $subfix, $power)
+    }
+  }
+  
+  @mixin dynamic-property($name, $attribute, $start, $end) {
+    @for $var from $start to $end {
+      .#{$name}-#{$var} {
+        #{$attribute}: #{(0.25*$var)}rem;
+      }
+    }
+  }

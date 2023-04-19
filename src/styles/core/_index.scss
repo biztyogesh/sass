@@ -1,0 +1,52 @@
+@import "./core-variables";
+@import "./core-fonts";
+@import "./core-border";
+@import "./core-cursor";
+@import "./core-flex";
+@import "./core-mixins";
+@import "./core-text";
+@import "./core-position";
+@import "./core-background";
+
+
+@include dynamic-space-property("width", "", "%", 1, 101);
+@include dynamic-space-property("height", "", "%", 1, 101);
+
+
+@include dynamic-property("padding", "padding", 1, 13);
+@include dynamic-property("padding-l", "padding-left", 1, 13);
+@include dynamic-property("padding-r", "padding-right", 1, 13);
+@include dynamic-property("padding-b", "padding-bottom", 1, 13);
+@include dynamic-property("padding-t", "padding-top", 1, 13);
+
+@include dynamic-property("margin", "margin", 1, 13);
+@include dynamic-property("margin-l", "margin-left", 1, 13);
+@include dynamic-property("margin-r", "margin-right", 1, 13);
+@include dynamic-property("margin-b", "margin-bottom", 1, 13);
+@include dynamic-property("margin-t", "margin-top", 1, 13);
+
+
+.app-content {
+    height: calc(100% - 72px);
+    overflow: auto;
+}
+
+.min-cotent-height {
+    min-height: calc(100% - 145px);
+}
+
+
+.height {
+    // pixel
+    &-min-80 {
+        min-height: 80px;
+    }
+}
+
+.width {
+    // percentage
+    &-min-50 {
+        min-width: 50px;
+    }
+}
+

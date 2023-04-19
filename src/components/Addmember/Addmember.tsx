@@ -6,7 +6,7 @@ function Card() {
       <div className="cardsss">
         <div className="subheadingss">
           <div className="Icon">
-            <img alt="YouTube" src="/BCG.png" />
+            <img alt="bcg" src="/BCG.png" />
           </div>
           <div className="work">
             <span className="biz">BOSTON .</span>

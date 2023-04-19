@@ -1,0 +1,13 @@
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+
+  &-move {
+    cursor: move;
+  }
+
+  &-default {
+    cursor: default;
+  }
+}

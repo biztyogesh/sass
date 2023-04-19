@@ -1,0 +1,19 @@
+.background {
+  &-primary-color {
+    background-color: $primary-color;
+  }
+
+  &-transparent {
+    background-color: transparent;
+  }
+
+  &-secondary-color {
+    background-color: $secondary-color;
+  }
+  
+  &-white-color {
+    background-color: $white-color;
+  }
+
+ 
+}

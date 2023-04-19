@@ -1,0 +1,86 @@
+.text {
+    &-xs {
+      font-size: $xs-font;
+    }
+    &-sm {
+      font-size: $sm-font;
+    }
+    &-md {
+      font-size: $md-font;
+    }
+    &-lg {
+      font-size: $lg-font;
+    }
+    &-x1lg {
+      font-size: $x1lg-font;
+    }
+    &-x2lg {
+      font-size: $x2lg-font;
+    }
+    &-x3lg {
+      font-size: $x3lg-font;
+    }
+    &-x4lg {
+      font-size: $x4lg-font;
+    }
+  
+    // align
+    &-align-left {
+      text-align: left;
+    }
+  
+    &-align-center {
+      text-align: center;
+    }
+  
+    &-align-right {
+      text-align: right;
+    }
+
+    // font-weight
+
+    &-bold {
+      font-weight: bold;
+    }
+
+    &-light {
+      font-weight: 400;
+    }
+    // font-color
+    &-primary-color {
+      color: $primary-color;
+    }
+
+    &-secondary-color {
+      color: $secondary-color;
+    }
+
+    &-default-color {
+      color: $default-color;
+    }
+
+    &-white-color{
+      color: $white-color;
+    }
+    
+    // misc
+    &-underline {
+      text-decoration: underline;
+    }
+
+    &-uppercase {
+      text-transform: uppercase ;
+    }
+
+    &-word-break {
+      word-break: break-all;
+    }
+
+    &-inline {
+      white-space: nowrap;
+    }
+
+    &-italic {
+      font-style: italic;
+    }
+  }
