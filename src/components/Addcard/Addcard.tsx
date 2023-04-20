@@ -8,11 +8,12 @@ function Addcard() {
 
     
       <div className="Maincontainer">
-      <div className="relative">
-        This div element has position: relative;
-        <div className="absolute">
+      <div className="container1">
+
         <div className="container">This div element has position: absolute;</div>
         </div>
+        <div className="container2">
+          <div className="hello"></div>
       </div>
       </div>
     </>
