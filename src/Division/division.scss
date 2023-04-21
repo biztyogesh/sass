@@ -1,0 +1,29 @@
+.container1 {
+    width: 40%;
+    padding: 0.5rem;
+    height: 87%;
+    border: solid black;
+}
+.container2 {
+    position: relative;
+    padding: 0.5rem;
+    height: 95%;
+    border: solid green;
+
+  .container3 {
+    padding: 0.5rem;
+     height: 95%;
+    border: solid gray;
+
+
+    .container4 {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 14%;
+        height: 24%;
+        border: solid blue;
+        // background-color: lightblue;
+    }
+  }
+}
