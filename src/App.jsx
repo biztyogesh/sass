@@ -1,30 +1,30 @@
+ import "semantic-ui-css/semantic.min.css";
+import "./App.scss";
 import React from "react";
-// import "./App.scss";
-// import Biz from "./components/Biz/Biz"
-// import Addcard from "./components/Addcard/Addcard";
-// import Addcard from "./components/Addcard/Addcard";
- import Addmember from "./components/Addmember/Addmember"
-   import Cards from "./components/Cards/Cards";
-  //  import Card from "./components/Card/Card";
-//  import Invoice from "./components/Invoice/Invoice";
+import { FormikForm } from "./Component/FormikForm";
+// import { CustomDropdown } from "./Component";
+// import Dropdwn from "./Component/Forminput/Dropdwn";
+  // import Inputsearch from "./Component/Forminput/Inputsearch";
+// import FormInput from "./Component/Forminput/formikdrop";
+  // import Hooks from "./Container/Hooks";
+// import Dropdown from "./Component/Forminput/Dropdown";
 function App() {
   return (
     <div className="App">
-      {/* <Biz/> */}
-      {/* <Addcard/> */}
-
-      {/* <Cards rating={4}/>   */}
-       {/* <Card/>  */}
-      <Addmember/>  
-   {/* <Addcard/>    */}
-    {/* <Invoice/>  */}
-
-
-  
-    
+      {/* <Dropdwn/> */}
+       {/* <Inputsearch/> */}
+       {/* <FormInput/> */}
+       {/* <CustomDropdown/> */}
+       {/* <Hooks/> */}
+       {/* <FormikForm/> */}
+       {/* <FormikForm/> */}
+       <FormikForm/>
+      
+     
     
 
     </div>
   );
 }
+
 export default App;
