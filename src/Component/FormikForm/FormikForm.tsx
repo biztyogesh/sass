@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./formik.scss";
 import { Formik, Form, ErrorMessage } from "formik";
 import { Dropdown } from "semantic-ui-react";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams,  } from "react-router-dom";
 
 interface IInitialValues {
   dropdownOption: any;
@@ -11,30 +11,32 @@ interface IInitialValues {
 }
 
 let dropdownOption: any = [
-  { key: "a", value: "Rajasthan", text: "Rajasthan" },
-  { key: "b", value: "Goa", text: "Goa" },
-  { key: "c", value: "Himachal pradesh", text: "Himachal Pradesh " },
-  { key: "d", value: "Chandigarh", text: "Chandigarh" },
-  { key: "e", value: "Uttar Pradesh", text: "Uttar pradesh" },
-  { key: "f", value: "Odisha", text: "Odisha" },
-  { key: "g", value: "Sikkim", text: "Sikkim" },
-  { key: "h", value: "Punjab", text: "Punjab" },
-  { key: "a", value: "Kerala", text: "Kerala" },
-  { key: "b", value: "Karnataka", text: "Karntaka" },
-  { key: "c", value: "Gujarat", text: "Gujarat" },
-  { key: "d", value: "Tripura", text: "Tripura" },
-  { key: "e", value: "Mizoram", text: "Mizoram" },
-  { key: "f", value: "Bihar", text: "Bihar" },
-  { key: "g", value: "Uttarakhand", text: "Uttarakhand" },
-  { key: "h", value: "Haryana", text: "Haryana" },
-  { key: "a", value: "Arunachal", text: "Arunachal" },
-  { key: "b", value: "Assam", text: "Assam" },
-  { key: "c", value: "Meghalaya", text: "Meghalaya" },
-  { key: "d", value: "Jharkhand", text: "jharkhand" },
-  { key: "e", value: "Chhattisgarh", text: "Chhattisgarh" },
-  { key: "f", value: "West Bengal", text: "West Bengal" },
-  { key: "g", value: "Tamil Nadu", text: "Tamil nadu" },
-  { key: "h", value: "Ladakh", text: "Ladakh" },
+  { key: "1", value: "Rajasthan", text: "Rajasthan" },
+  { key: "2", value: "Goa", text: "Goa" },
+  { key: "3", value: "Himachal pradesh", text: "Himachal Pradesh " },
+  { key: "4", value: "Chandigarh", text: "Chandigarh" },
+  { key: "25", value: "Jammu", text: "J&K" },
+  { key: "5", value: "Uttar Pradesh", text: "Uttar pradesh" },
+  { key: "6", value: "Odisha", text: "Odisha" },
+  { key: "7", value: "Sikkim", text: "Sikkim" },
+  { key: "8", value: "Punjab", text: "Punjab" },
+  { key: "9", value: "Kerala", text: "Kerala" },
+  { key: "10", value: "Karnataka", text: "Karntaka" },
+  { key: "11", value: "Gujarat", text: "Gujarat" },
+  { key: "12", value: "Tripura", text: "Tripura" },
+  { key: "13", value: "Mizoram", text: "Mizoram" },
+  { key: "14", value: "Bihar", text: "Bihar" },
+  { key: "15", value: "Uttarakhand", text: "Uttarakhand" },
+  { key: "16", value: "Haryana", text: "Haryana" },
+  { key: "17", value: "Arunachal", text: "Arunachal" },
+  { key: "18", value: "Assam", text: "Assam" },
+  { key: "19", value: "Meghalaya", text: "Meghalaya" },
+  { key: "20", value: "Jharkhand", text: "jharkhand" },
+  { key: "21", value: "Chhattisgarh", text: "Chhattisgarh" },
+  { key: "22", value: "West Bengal", text: "West Bengal" },
+  { key: "23", value: "Tamil Nadu", text: "Tamil nadu" },
+  { key: "24", value: "Ladakh", text: "Ladakh" },
+ 
 ];
 
 function FormikForm() {
@@ -49,18 +51,17 @@ function FormikForm() {
   const validate = (values: any) => {
     const errors:any = {};
     if (!values.dropdownOption) {
-      errors.dropdownOption = "Please select a option";
+      errors.dropdownOption = "Please select ";
     }
     if (!values.dropdownOption1) {
-      errors.dropdownOption1 = "Please select a option";
+      errors.dropdownOption1 = "Please select";
     }
 
     if (!values.dropdownOption2) {
-      errors.dropdownOption2 = "Please select a option";
+      errors.dropdownOption2 = "please select";
     }
-    return errors;
+    return errors; 
   };
-
 
   useEffect(() => {
     if(!initialValues && searchParams) {
@@ -84,6 +85,7 @@ function FormikForm() {
           <Dropdown
             selection
             name="dropdownOption"
+            multiple
             value={values?.dropdownOption}
             options={dropdownOption}
             placeholder="Select Option"
@@ -100,6 +102,7 @@ function FormikForm() {
           <Dropdown
             selection
             name="dropdownOption1"
+            multiple
             value={values?.dropdownOption1}
             placeholder="Select Option"
             options={dropdownOption}
