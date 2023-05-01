@@ -39,13 +39,13 @@ function FormikForm() {
     });
     console.log(values.dropdownOption);
     if (
-      Array.isArray(values.dropdownOption) &&   /* condition lgayi ki agr value array m aa ri hai  */
+      Array.isArray(values.dropdownOption) &&   /* condition lgayi ki agr value array m aa ri hai 2 value select ki to value array m aayegi agr  */
       Array.isArray(values.dropdownOption1)    /* condition lgayi ki agr  dropdownoption1 ki value array m aa ri hai yani ki 1 se jyada values select ki hai   */
     ) {
       console.log(true);
       values.dropdownOption.forEach((item: any, index: any) => {  /*foreach lga diya ki ab array k andr sb kuch dekho*/
         console.log(item);
-        queryParams.append("param", item);   /*new value real krta hai append*/
+        queryParams.append("param", item);   /* append new value ko last m insert krta hai */
       });
       values.dropdownOption1.forEach((item: any, index: any) => {  /*for each lga diya  ki ab array k andr sb kuch dekha do*/
         console.log(item);
