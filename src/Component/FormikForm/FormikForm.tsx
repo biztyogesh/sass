@@ -67,6 +67,7 @@ function FormikForm() {
     if(!initialValues && searchParams) {
       setInitialValues({
         dropdownOption: searchParams.get("dropdownOption"),
+        
         dropdownOption1: searchParams.get("dropdownOption1"),
         dropdownOption2: searchParams.get("dropdownOption2")
       })
