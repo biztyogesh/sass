@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./customdropdown.scss";
+import "./formikretain.scss";
 import { Formik, Form, ErrorMessage } from "formik";
 import { Dropdown } from "semantic-ui-react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 interface IInitialValues {
   dropdownOption: any;
@@ -13,6 +13,10 @@ interface IInitialValues {
 let dropdownOption: any = [
   { key: "1", value: "Rajasthan", text: "Rajasthan" },
   { key: "2", value: "Goa", text: "Goa" },
+  { key: "3", value: "Himachal pradesh", text: "Himachal Pradesh " },
+  { key: "4", value: "Chandigarh", text: "Chandigarh" },
+  { key: "25", value: "Jammu", text: "J&K" },
+  { key: "5", value: "Uttar Pradesh", text: "Uttar Predesh" },
   { key: "6", value: "Odisha", text: "Odisha" },
   { key: "7", value: "Sikkim", text: "Sikkim" },
   { key: "8", value: "Punjab", text: "Punjab" },
@@ -22,10 +26,6 @@ let dropdownOption: any = [
   { key: "12", value: "Tripura", text: "Tripura" },
   { key: "13", value: "Mizoram", text: "Mizoram" },
   { key: "14", value: "Bihar", text: "Bihar" },
-  { key: "3", value: "Himachal pradesh", text: "Himachal Pradesh " },
-  { key: "4", value: "Chandigarh", text: "Chandigarh" },
-  { key: "25", value: "Jammu", text: "Jammu" },
-  { key: "5", value: "Uttar Pradesh", text: "Uttar pradesh" },
   { key: "15", value: "Uttarakhand", text: "Uttarakhand" },
   { key: "16", value: "Haryana", text: "Haryana" },
   { key: "17", value: "Arunachal", text: "Arunachal" },
@@ -35,34 +35,31 @@ let dropdownOption: any = [
   { key: "21", value: "Chhattisgarh", text: "Chhattisgarh" },
   { key: "22", value: "West Bengal", text: "West Bengal" },
   { key: "23", value: "Tamil Nadu", text: "Tamil nadu" },
-  { key: "24", value: "Ladakh", text: "Ladakh" }
+  { key: "24", value: "Ladakh", text: "Ladakh" },
+  { key: "20", value: "UAE", text: "UAE" },
+  { key: "18", value: "Japan", text: "japan" },
+  { key: "19", value: "USA", text: "USA" },
+  { key: "21", value: "Tokyo", text: "Tokyo" },
+  { key: "22", value: "Switzerland", text: "Switzerland" },
+  { key: "23", value: "Canada", text: "Canada" },
+  { key: "24", value: "Germany", text: "Germany" },
+  { key: "25", value: "Jaipur", text: "Jaipur" }
 ];
 
-function FormikForm() {
-  let navigate = useNavigate();
-  let [searchParams] = useSearchParams();
+function FormikRetain() {
+  let [searchParams, setSearchParams] = useSearchParams();
   const [initialValues, setInitialValues] = useState<IInitialValues>(
     undefined!
   );
   const handleSubmit = (values: any) => {
+    setSearchParams(values);
     console.log(values);
-    let params = new URLSearchParams();
-    for (const key in values) {    //sari key ko check krega
-      if (Array.isArray(values[key])) {
-        params.append(key, values[key].join(","));  //agr value array m aa ri hai to jood do or uske m , dedo
-      } else {
-        params.append(key, values[key]);
-      }
-    }
-    //to remove %2C and add , in every URL
-    const queryString = decodeURIComponent(params.toString());  
-    navigate(`/?${queryString}`);   //url set krta hai
   };
 
   const validate = (values: any) => {
     const errors: any = {};
     if (!values.dropdownOption) {
-      errors.dropdownOption = "Please select ";
+      errors.dropdownoption = "Please select";
     }
     if (!values.dropdownOption1) {
       errors.dropdownOption1 = "Please select";
@@ -76,13 +73,11 @@ function FormikForm() {
 
   useEffect(() => {
     if (!initialValues && searchParams) {
-      const dropdownOptionValues = searchParams.get("dropdownOption")?.split(",") || [];   
-      const dropdownOption1Values = searchParams.get("dropdownOption1")?.split(",") || [];
-      const dropdownOption2Value = searchParams.get("dropdownOption2");
+
       setInitialValues({
-        dropdownOption: dropdownOptionValues,
-        dropdownOption1: dropdownOption1Values,
-        dropdownOption2: dropdownOption2Value
+        dropdownOption: Array.from(searchParams.getAll("dropdownOption")),
+        dropdownOption1: Array.from(searchParams.getAll("dropdownOption1")),
+        dropdownOption2: searchParams.get("dropdownOption2")
       });
     }
   }, [initialValues, searchParams]);
@@ -92,14 +87,13 @@ function FormikForm() {
       initialValues={initialValues}
       validate={validate}
       onSubmit={handleSubmit}
-      enableReinitialize
+      enableReinitialize     
     >
       {({ values, setFieldValue }) => (
         <Form>
           <Dropdown
             selection
-            name="dropdownOption
-            "
+            name="dropdownOption"
             multiple
             value={values?.dropdownOption}
             options={dropdownOption}
@@ -110,7 +104,7 @@ function FormikForm() {
           />
           <ErrorMessage
             name="dropdownOption"
-            component="Please"
+            component="please"
             className="error-message"
           />
 
@@ -152,5 +146,6 @@ function FormikForm() {
       )}
     </Formik>
   );
+  
 }
-export default FormikForm;
+export default FormikRetain;
